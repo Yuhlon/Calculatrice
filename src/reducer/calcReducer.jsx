@@ -52,19 +52,19 @@ function calcReducer(state, action) {
     case "CALCULATE_RESULT":
       switch (state.operator) {
         case "+":
-          result = parseFloat(state.currentInput) + parseFloat(state.input);
+          result = parseInt(state.currentInput) + parseInt(state.input);
           break;
         case "-":
-          result = parseFloat(state.currentInput) - parseFloat(state.input);
+          result = parseInt(state.currentInput) - parseInt(state.input);
           break;
         case "*":
-          result = parseFloat(state.currentInput) * parseFloat(state.input);
+          result = parseInt(state.currentInput) * parseInt(state.input);
           break;
         case "/":
           result = parseFloat(state.currentInput) / parseFloat(state.input);
           break;
         default:
-          result = parseFloat(state.input);
+          result = parseInt(state.input);
       }
       return {
         ...state,
